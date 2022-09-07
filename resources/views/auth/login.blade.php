@@ -2,19 +2,23 @@
 
 @section('content')
     <div class="col-md-10 text-center ml-auto mr-auto">
-        <h3 class="mb-5">Log in to see how you can speed up your web development with out of the box CRUD for #User Management and more.</h3>
+        <h3 class="mb-2">
+            {{ __('Log in to see your meals and dishes.')}}
+        </h3>
+        <h2 class="mb-5">
+            {{ __('Bon Appetit') }}
+        </h2>
     </div>
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
         <form class="form" method="post" action="{{ route('login') }}">
             @csrf
 
-            <div class="card card-login card-white">
+            <div class="card card-login">
                 <div class="card-header">
-                    <img src="{{ asset('black') }}/img/card-primary.png" alt="">
-                    <h1 class="card-title">{{ __('Log in') }}</h1>
+                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
+                    <h4 class="card-title text-white ml-1">{{ __('Log in') }}</h4>
                 </div>
                 <div class="card-body">
-                    <p class="text-dark mb-2">Sign in with <strong>admin@black.com</strong> and the password <strong>secret</strong></p>
                     <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                         <div class="input-group-prepend">
                             <div class="input-group-text">

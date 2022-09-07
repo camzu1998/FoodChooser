@@ -8,8 +8,25 @@
                     <div class="col-lg-5 col-md-6">
                         <h1 class="text-white">{{ __('Welcome!') }}</h1>
                         <p class="text-lead text-light">
-                            {{ __('Use Black Dashboard theme to create a great project.') }}
+                            {{ __('Choose a meal and randomize from the default dishes') }}
                         </p>
+                        <div class="row" style="align-items: center;">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="MealSelect">{{ __('Meals') }}</label>
+                                    <select class="form-control" id="MealSelect">
+                                        <option>{{ __('Breakfast') }}</option>
+                                        <option>{{ __('Lunch') }}</option>
+                                        <option>{{ __('Dinner') }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-primary btn-round">
+                                    <i class="tim-icons icon-refresh-02"></i> {{ __('Draw') }}
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
